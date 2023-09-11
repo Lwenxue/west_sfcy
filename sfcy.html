@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>双峰插云</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 	</head>
 	<style>
 		body {
@@ -44,6 +45,8 @@
 		  text-decoration: none;
 		  z-index: 9999;
 		}
+		
+		
 		.menu {
 		  width: 25%;
 		  height: 100vh;
@@ -104,7 +107,8 @@
 			padding: 5px 10px;
 		}
 		.sfcy h2{
-			text-align:center;}
+			text-align: center;
+		}
 		.qj{
 			width: 25%;
 			height: 20%;
@@ -129,6 +133,37 @@
 			float: left;
 			margin-left: 10px;
 		}
+		/* 定义箭头样式 */
+		.arrow {
+		  font-size: 20px;
+		  vertical-align: middle;
+		}
+		
+		/* 定义按钮样式 */
+		.button {
+		  display: inline-block;
+		  padding: 5px 8px;
+		  border: none;
+		  border-radius: 3px;
+		  background-color: #909190;
+		  color: white;
+		  cursor: pointer;
+		  font-size: 8px;
+		}
+		.pagination  {
+		  position: fixed;
+		  bottom: 20px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		}
+		
+		/* 定义按钮 hover 状态的样式 */
+		.button:hover {
+		  background-color: #979897;
+		}
+		.button i {
+		      font-size: 8px; /* 这里设置图标的大小 */
+		    }
 	</style>
 	<body>
 		<div class="container">
@@ -136,7 +171,7 @@
 			<a href="#" class="menu-icon"><i class="fas fa-bars"></i></a>
 			<div class="menu">
 			<ul>
-			 <li><a href="https://lwenxue.github.io/west_dqcx/dqcx.html">1、断桥残雪</a></li></br>
+			  <li><a href="https://lwenxue.github.io/west_dqcx/dqcx.html">1、断桥残雪</a></li></br>
 			  <li><a href="https://lwenxue.github.io/west_phqy/phqy.html">2、平湖秋月</a></li></br>
 			  <li><a href="https://lwenxue.github.io/west_sdcx/sdcx.html">3、苏堤春晓</a></li></br>
 			  <li><a href="https://lwenxue.github.io/west_qyfh/qyfh.html">4、曲院风荷</a></li></br>
@@ -204,6 +239,22 @@
 					东端高台之上建有一座重檐攒尖顶木亭，亭外悬挂乾隆御笔“两峰插云”匾，与杭州西湖“两峰插云”同名，是圆明园内西湖十景之一。每到九
 					九重阳节，此处是帝后登高之处。
 				</p>
+				<div class="pagination">
+				    <a href="https://lwenxue.github.io/west_qyfh/qyfh.html" class="prev">
+						<!-- 上一页按钮 -->
+					  <button class="button" onclick="goToPreviousPage()">
+						<i class="arrow fas fa-chevron-left"></i>
+						上一页
+					  </button>
+					</a>
+				    <a href="https://lwenxue.github.io/west_hggy/hggy.html" class="next">
+						<!-- 下一页按钮 -->
+						<button class="button" onclick="goToNextPage()">
+											下一页
+						<i class="arrow fas fa-chevron-right"></i>
+						</button>
+					</a>
+				</div>
 			</div>
 	</body>
 	<script>
